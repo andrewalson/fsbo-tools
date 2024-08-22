@@ -1,0 +1,52 @@
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { BarChart2, Home, Map, Search } from "lucide-react"
+
+export default function Portals() {
+    return (
+        <div className="min-h-screen flex items-center justify-center">
+            <div className="max-w-6xl w-full mx-auto p-6 space-y-8">
+                <h1 className="text-5xl md:text-6xl font-bold text-center mb-8">
+                    FSBO Toolkit
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-500 text-center mb-12">
+                    Access powerful tools to sell your home
+                </p>
+
+                <div className="flex items-center mb-12">
+                    <div className="relative flex-grow">
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                        <Input
+                            className="pl-10 py-6 text-lg w-full"
+                            placeholder="Enter your home address"
+                        />
+                    </div>
+                    <Button className="ml-4 bg-orange-500 hover:bg-orange-600 text-white py-6 px-8 text-lg">
+                        Get Started
+                    </Button>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                    <Card className="flex flex-col items-center p-6">
+                        <h2 className="text-2xl font-bold mb-2">Comparative Analysis</h2>
+                        <p className="text-gray-500 text-center mb-6">Identify listing and target sale prices</p>
+                        <BarChart2 className="w-20 h-20 text-orange-500 mb-6" />
+                        <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full">
+                            Start Analysis
+                        </Button>
+                    </Card>
+
+                    <Card className="flex flex-col items-center p-6">
+                        <h2 className="text-2xl font-bold mb-2">Interactive Roadmap</h2>
+                        <p className="text-gray-500 text-center mb-6">Navigate your home selling journey</p>
+                        <Map className="w-20 h-20 text-orange-500 mb-6" />
+                        <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full">
+                            View Roadmap
+                        </Button>
+                    </Card>
+                </div>
+            </div>
+        </div>
+    )
+}

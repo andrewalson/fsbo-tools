@@ -19,6 +19,10 @@ const config = {
     },
     extend: {
       colors: {
+        orange: {
+          500: '#f97316',
+          600: '#ea580c',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
